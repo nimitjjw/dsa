@@ -37,7 +37,7 @@ class Solution:
         
 
         """
-        Approach 2 (using .get function on hashmap):
+        Approach 2 (NeetCode solution):
         Time Complexity: O(n)
         Space Complexity: O(n)
         """
