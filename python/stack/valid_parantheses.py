@@ -5,8 +5,7 @@ class Solution:
         Time complexity: O(n)
         Space complexity: O(n)
         """
-
-
+        
         dic = {'}':'{', ')':'(', ']':'['}
         
         stack = []
@@ -15,11 +14,16 @@ class Solution:
             return False
 
         for char in s:
-            if char in dic:
-                if stack[-1] == dic[char]:
-                    stack.pop()
+            if char in dic and len(stack) != 0:
+                    if stack[-1] == dic[char]:
+                        stack.pop()
+                    else:
+                        return False
             else:
                 stack.append(char)
+                
+        
+        print(stack)
         
         if len(stack) == 0:
             return True
